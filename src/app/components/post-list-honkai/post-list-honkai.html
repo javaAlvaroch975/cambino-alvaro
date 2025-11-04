@@ -1,9 +1,10 @@
-<h1>Blog</h1>
+<h1>Personajes de Honkai Star Rail</h1>
 <ul>
-  @for (post of posts; track post.id) {
+  @for (post of posts; track post.name) {
     <li>
-      <h3>{{ post.title }} ({{ post.id }})</h3>
-      <p>{{ post.body }}</p>
+      <h3>{{ post.name }} {{ post.rarity }}</h3>
+      <p><strong>Elemento:</strong> {{ post.element }}</p>
+      <p><strong>Camino:</strong> {{ post.path }}</p>
     </li>
   }
 </ul>

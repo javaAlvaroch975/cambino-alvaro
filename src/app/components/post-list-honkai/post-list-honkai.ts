@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { JsonplaceholderService } from '../../services/jsonplaceholder-service-honkai';
-import { Post } from '../../model/postInterface-honkai';
+import { HonkaiCharacter } from '../../model/postInterface-honkai';
 
 @Component({
   selector: 'app-post-list-honkai',
@@ -9,9 +9,9 @@ import { Post } from '../../model/postInterface-honkai';
   styleUrl: './post-list-honkai.css',
 })
 
-export class PostListComponent {
+export class HonkaiComp {
 
-  posts: Post[] = [];
+  posts: HonkaiCharacter[] = [];
 
   constructor(private oJsonplaceholderService: JsonplaceholderService) { }
 
@@ -20,9 +20,9 @@ export class PostListComponent {
   }
 
   getPosts() {
-    this.oJsonplaceholderService.getAllPosts().subscribe((posts: Post[]) => {
+    this.oJsonplaceholderService.getAllPosts().subscribe((posts: any) => {
       console.log(posts);
-      this.posts = posts;
+      this.posts = Object.values(posts);
     });
   }
 }

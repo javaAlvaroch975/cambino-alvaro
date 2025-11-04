@@ -1,6 +1,6 @@
-export interface Post {
-    userId: number;
-    id:     number;
-    title:  string;
-    body:   string;
+export interface HonkaiCharacter {
+    name: string;
+    element: string;
+    path: string;
+    rarity: number;
 }
