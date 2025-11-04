@@ -3,4 +3,6 @@ export interface HonkaiCharacter {
     element: string;
     path: string;
     rarity: number;
+    portrait: string;
+    icon: string;
 }
